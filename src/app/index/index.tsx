@@ -1,7 +1,8 @@
-import { ScrollView, Text, View } from "react-native";
+import { Alert, ScrollView, Text, View } from "react-native";
 import { styles } from "./styles";
 import { useState } from "react";
 import { Ingredient } from "@/components/Ingredient";
+import { Selected } from "@/components/Selected";
 
 export default function Index() {
 
@@ -14,6 +15,13 @@ export default function Index() {
     }
     setSelected((state) => [...state, value])
     console.log(selected);
+  }
+
+  function handleClearSelected() {
+    Alert.alert("Clear", "Do you want to clean up?", [
+      { text: "No", style: "cancel" },
+      { text: "Yes", onPress: () => setSelected([]) },
+    ]);
   }
 
   return (
@@ -32,9 +40,23 @@ export default function Index() {
         showsVerticalScrollIndicator={false}
       >
         {Array.from({ length: 100 }).map((item, index) => (
-          <Ingredient key={index} name="Maçã" image="" selected={selected.includes(String(index))} onPress={() => handleToggleSelected(String(index))} />
+          <Ingredient
+            key={index}
+            name="Maçã"
+            image=""
+            selected={selected.includes(String(index))}
+            onPress={() => handleToggleSelected(String(index))}
+          />
         ))}
       </ScrollView>
+
+      {selected.length > 0 && (
+        <Selected
+          quantity={selected.length}
+          onClear={handleClearSelected}
+          onSearch={() => {}}
+        />
+      )}
     </View>
   );
 }

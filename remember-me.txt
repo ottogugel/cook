@@ -22,7 +22,7 @@ npx expo start
 copiar os arquivos theme da pasta do github do rodrigo onde tem
 borders, colors, fonts, index.ts
 
-instalar a font roboto 
+instalar a font roboto
 
 npm expo install expo-font @expo-google-fonts/poppins
 
@@ -34,5 +34,13 @@ usar o pressable (usuario interage pelo toque)
 
 {...rest} = spread operator (pega todas as propriedades e coloca aqui)
 
-instalar reanimate
+instalar react-native-reanimate
 
+npx expo install react-native-reanimated
+
+setSelected([]) // Limpando o que foi selecionado, devido ao arrow que foi colocado dentro do objeto.
+
+copiar os componentes já feito porque vão ser reutilizados em todas as telas.
+
+instalar linear gradient
+npx expo install expo-linear-gradient

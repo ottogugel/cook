@@ -7,6 +7,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Expo](https://docs.expo.dev/)
 - [Google Fonts](https://fonts.google.com/specimen/Poppins)
 - [Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/)
+- [Linear Gradient]()
 
 
 ### Links
