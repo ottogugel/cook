@@ -1,0 +1,38 @@
+Como iniciar o projeto em react native
+
+npx create-expo-app --template
+navigation (typescript)
+cook
+dar code . e acessar o projeto no vs code
+
+apagar as pastas  app / components / constants
+
+apagar dentro de assets a pasta fonts
+
+criar uma pasta sr dentro dela clicar uma pasta app e o arquivo index.tsx (ponto de entrada)
+
+criar um arquivo style.ts
+
+ir na configuração do tsconfig.json em paths colocar       "@/*": ["./src/*"]
+
+rodando a aplicação
+
+npx expo start
+
+copiar os arquivos theme da pasta do github do rodrigo onde tem
+borders, colors, fonts, index.ts
+
+instalar a font roboto 
+
+npm expo install expo-font @expo-google-fonts/poppins
+
+criar um arquivo _layout.tsx em app
+
+para quebrar linha {"\n"}
+
+usar o pressable (usuario interage pelo toque)
+
+{...rest} = spread operator (pega todas as propriedades e coloca aqui)
+
+instalar reanimate
+
