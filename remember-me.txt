@@ -44,3 +44,11 @@ copiar os componentes já feito porque vão ser reutilizados em todas as telas.
 
 instalar linear gradient
 npx expo install expo-linear-gradient
+
+instalando o supabase
+npx expo install @supabase/supabase-js @react-native-async-storage/async-storage react-native-elements react-native-url-polyfill
+
+criar uma pasta services junto ao arquivo supabase.ts
+criar um arquivo .env e configurar pegando o link e a key no site nas configurações do projeto em API.
+
+se não tiver nada vai ser uma string vazia ?? ""

@@ -29,7 +29,7 @@ export function Recipe({ recipe, ...rest }: Props) {
           </Text>
 
           <Text style={styles.minutes} numberOfLines={1} lineBreakMode="tail">
-            {recipe.minutes} minutos
+            {recipe.minutes} minutes
           </Text>
         </LinearGradient>
       </ImageBackground>
