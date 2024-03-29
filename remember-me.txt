@@ -52,3 +52,16 @@ criar uma pasta services junto ao arquivo supabase.ts
 criar um arquivo .env e configurar pegando o link e a key no site nas configurações do projeto em API.
 
 se não tiver nada vai ser uma string vazia ?? ""
+
+// para aparecer uma lista com 100
+        {Array.from({ length: 100 }).map((item, index) => (
+          <Ingredient
+            key={index}
+            name="Maçã"
+            image=""
+            selected={selected.includes(String(index))}
+            onPress={() => handleToggleSelected(String(index))}
+          />
+        ))}
+
+RPC - é quando você quer executar uma função que tá lá dentro do supabase e ai que acontece

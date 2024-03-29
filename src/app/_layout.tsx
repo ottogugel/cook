@@ -6,6 +6,7 @@ import {
   Poppins_700Bold
 } from "@expo-google-fonts/poppins"
 import { Loading } from "@/components/Loading";
+import { StatusBar, View } from "react-native";
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -20,5 +21,10 @@ export default function Layout() {
     )
   }
 
-  return <Slot />;
+  return (
+    <>
+      <StatusBar backgroundColor="transparent" translucent barStyle="dark-content" />
+      <Slot />
+    </>
+  );
 }

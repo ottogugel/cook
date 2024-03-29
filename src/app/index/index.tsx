@@ -9,6 +9,7 @@ import { services } from '@/services'
 export default function Index() {
 
   const [selected, setSelected] = useState<String[]>([])
+  const [ingredients, setIngredients] = useState<IngredientResponse[]>([])
 
   // Selecionar o ingrediente
   function handleToggleSelected(value: string) {
@@ -29,11 +30,11 @@ export default function Index() {
   }
 
   function handleSearch() {
-    router.navigate('/recipes/')
+    router.navigate("/recipes/" + selected)
   }
 
   useEffect(() => {
-    services.ingredients.findAll().then(console.log)
+    services.ingredients.findAll().then(setIngredients)
   }, [])
 
   return (
@@ -51,13 +52,13 @@ export default function Index() {
         contentContainerStyle={styles.ingredients}
         showsVerticalScrollIndicator={false}
       >
-        {Array.from({ length: 100 }).map((item, index) => (
+        {ingredients.map((item) => (
           <Ingredient
-            key={index}
-            name="Maçã"
-            image=""
-            selected={selected.includes(String(index))}
-            onPress={() => handleToggleSelected(String(index))}
+            key={item.id}
+            name={item.name}
+            image={`${services.storage.imagePath}/${item.image}`}
+            selected={selected.includes(item.id)}
+            onPress={() => handleToggleSelected(item.id)}
           />
         ))}
       </ScrollView>
