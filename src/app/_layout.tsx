@@ -1,4 +1,6 @@
 import { Slot } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+
 import {
   useFonts,
   Poppins_400Regular,
@@ -6,7 +8,9 @@ import {
   Poppins_700Bold
 } from "@expo-google-fonts/poppins"
 import { Loading } from "@/components/Loading";
-import { StatusBar, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+
+SplashScreen.hideAsync();
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -21,9 +25,11 @@ export default function Layout() {
     )
   }
 
-  return (
+SplashScreen.hideAsync();
+
+return (
     <>
-      <StatusBar backgroundColor="transparent" translucent barStyle="dark-content" />
+      <StatusBar style="dark" />
       <Slot />
     </>
   );

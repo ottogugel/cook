@@ -8,7 +8,7 @@ import { services } from "@/services"
 import { styles } from "./styles"
 import { Step } from "@/components/Step"
 import { Loading } from "@/components/Loading"
-import { Ingredients } from "@/components/Ingredients"
+import { Ingredients } from "@/components/Ingredients";
 
 export default function Recipes() {
   const [isLoading, setIsLoading] = useState(true)
@@ -77,5 +77,5 @@ export default function Recipes() {
         </View>
       </View>
     </View>
-  )
+  );
 }
