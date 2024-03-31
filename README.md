@@ -1,3 +1,7 @@
+<h1 align="center">
+  <img width="100%" alt="Banner" title="App" src="app.png" />
+</h1>
+
 ### Sobre o projeto
 
 Cook App: Imagine chegar em casa com fome depois de um dia de muito trabalho e lembrar que você esqueceu de passar no mercado para fazer as compras da semana. Então você decide abrir a geladeira pra fazer uma janta com o que já tem em casa, mas está sem muita criatividade pra cozinhar.
